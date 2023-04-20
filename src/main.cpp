@@ -514,58 +514,37 @@ void autonomous() {
   DriveReverse(0.6, 70);
   delay(200);
   DriveForward(0.5, 70);
-
-
-
   P_Left(300, 0.6);
   DriveForward(0.8, 80);
   delay(400);
   DriveReverse(1, 80);
-
-
-
   P_Right(338, 0.6);
   AutonShoot(565, 3);
   delay(200);
-
-
-  P_Right(44, 0.6);
-
-
+  P_Right(43, 0.6);
   AutonomousSpin1.remove();
-  BangBangInput = 500;
+  BangBangInput = 520;
   Task AutonomousSpin2(FlyWheelEvent);
-
-
-
-
-
   SpinIntake();
   DriveForward(5, 70);
   delay(100);
   DriveForward(3.3, 30);
   delay(300);
   StopIntakeIndexer();
-  P_Left(320, 0.7);
-  AutonShoot(500, 3);
+  P_Left(315, 0.7);
+  AutonShoot(520, 3);
    AutonomousSpin2.remove();
-  BangBangInput = 500;
+  BangBangInput = 520;
   Task AutonomousSpin3(FlyWheelEvent);
   StopIntakeIndexer();
-  DriveReverse(2, 40);
+  P_Right(44, 0.7);
   SpinIntake();
-  DriveForward(4, 70);
-  DriveForward(4, 30);
-  setBreakingBrake();
-  P_Left(305, 2.8);
-   degreeTest();
-  AutonShoot(500, 3);
-  P_Right(48, 2.8);
-  SpinIntake();
-  DriveForward(12, 70);
-  P_Left(225, 2.8);
-  DriveReverse(2, 70);
-  
+  DriveForward(11, 60);
+  P_Right(215, 1);
+  DriveReverse(2.5, 127);
+  delay(600);
+  DriveForward(1, 127);
+  degreeTest();
 
 
 }
