@@ -518,7 +518,7 @@ void autonomous() {
   DriveForward(0.8, 80);
   delay(400);
   DriveReverse(1, 80);
-  P_Right(338, 0.6);
+  P_Right(340, 0.6);
   AutonShoot(565, 3);
   delay(200);
   P_Right(43, 0.6);
@@ -540,7 +540,7 @@ void autonomous() {
   P_Right(44, 0.7);
   SpinIntake();
   DriveForward(11, 60);
-  P_Right(215, 1);
+  P_Right(213, 1);
   DriveReverse(2.5, 127);
   delay(600);
   DriveForward(1, 127);
