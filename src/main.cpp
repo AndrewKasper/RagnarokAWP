@@ -507,7 +507,7 @@ void competition_initialize() {}
 void autonomous() {
   setBreakingBrake();
   flyWheelSpinning = true;
-  BangBangInput = 560;
+  BangBangInput = 565;
   Task AutonomousSpin1(FlyWheelEvent);
   SpinIntake();
   P_Left(350, 0.5);
@@ -517,55 +517,48 @@ void autonomous() {
 
 
 
-  P_Left(300, 0.5);
-  degreeTest();
+  P_Left(300, 0.6);
   DriveForward(0.8, 80);
   delay(400);
   DriveReverse(1, 80);
 
 
 
-  P_Right(345, 2.8);
-  AutonShoot(560, 3);
+  P_Right(338, 0.6);
+  AutonShoot(565, 3);
   delay(200);
 
 
-  P_Right(47, 2.8);
-
+  P_Right(44, 0.6);
 
 
   AutonomousSpin1.remove();
   BangBangInput = 500;
   Task AutonomousSpin2(FlyWheelEvent);
-  setCoast();
+
 
 
 
 
   SpinIntake();
-  DriveForward(5, 127);
+  DriveForward(5, 70);
   delay(100);
-  DriveForward(4.5, 30);
-  delay(100);
+  DriveForward(3.3, 30);
+  delay(300);
   StopIntakeIndexer();
-  delay(10000);
-  DriveForward(9.5, 127);
-  P_Right(210, 2.8);
-  SpinIntake();
-  DriveReverse(4, 40);
-  delay(900);
-  StopIntakeIndexer();
-  P_Left(265, 2.8);
+  P_Left(320, 0.7);
+  AutonShoot(500, 3);
+   AutonomousSpin2.remove();
+  BangBangInput = 500;
+  Task AutonomousSpin3(FlyWheelEvent);
   StopIntakeIndexer();
   DriveReverse(2, 40);
-
-
-  
   SpinIntake();
   DriveForward(4, 70);
   DriveForward(4, 30);
   setBreakingBrake();
   P_Left(305, 2.8);
+   degreeTest();
   AutonShoot(500, 3);
   P_Right(48, 2.8);
   SpinIntake();
